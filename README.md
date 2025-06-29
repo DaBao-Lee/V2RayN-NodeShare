@@ -11,7 +11,7 @@
 - [VLESS 11](vless://89b3cbba-e6ac-485a-9481-976a0415eab9@172.67.161.13:443?encryption=none&security=tls&sni=PROdUcTiOn.pPaL03.aDhAM-EsSa.WoRKers.deV&alpn=h2&fp=chrome&type=ws&host=pROdUCtioN.PPaL03.aDhAM-ESSA.wOrKErs.dEv&path=%2F#%F0%9F%94%92%20VL-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-172.67.161.13%3A443)
 - [VLESS 12](vless://8cb143d6-ba4e-4217-987f-38abbf2ff4f2@172.67.174.89:443?encryption=none&security=tls&sni=pPaL03.liana-guTKowSKi.wOrKErs.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=PPaL03.LiaNA-gUtKowskI.worKerS.dev&path=%2FTelegram%40V2ray_Alpha%2F%3Fed%3D2048#Best1)
 - [VLESS 13](vless://d8dd94fd-540e-461d-b5d4-acebef02c22a@59.153.217.57:34045?encryption=none&security=reality&sni=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me&fp=firefox&pbk=cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA&sid=e8ab71d0&type=tcp&headerType=none#Best2)
-- [VLESS 14](vless://31348b17-4ab2-40c0-b79e-c81032331d30@104.16.140.135:2087?encryption=none&security=tls&sni=b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev&type=ws&host=b4f0
+- [VLESS 14](vless://31348b17-4ab2-40c0-b79e-c81032331d30@104.16.140.135:2087?encryption=none&security=tls&sni=b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev&type=ws&host=b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev&path=%2F#Best4)
 
 
 | 名称 | 链接 | 描述 |
