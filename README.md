@@ -1,6 +1,5 @@
 ```
 订阅地址: https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/nodes.txt
--->
 
 润发慈善2: vless://06e4425e-a8cb-4b63-929f-2105604ab0a9@www.udemy.com:443?encryption=none&security=tls&sni=xv.ylks0033.dpdns.org&fp=randomized&type=ws&host=xv.ylks0033.dpdns.org&path=%2F%3Fed%3D2560#%E6%B6%A6%E5%8F%91%E6%85%88%E5%96%842 <!-- TLS WebSocket 连接，托管于 udemy.com -->
 
