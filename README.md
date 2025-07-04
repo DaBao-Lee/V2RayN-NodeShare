@@ -1,5 +1,6 @@
 ```
-Subscribe Link: https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64
+Subscribe Link1: https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64
+Subscribe Link2: https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/nodes.txt
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Windows: https://objects.githubusercontent.com/github-production-release-asset-2e65be/199570071/b09765de-dae4-4bac-a7a5-cfc72b60bd0c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250704%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250704T095928Z&X-Amz-Expires=1800&X-Amz-Signature=0006b59125051bc4f40ada4661d78c192c40502c74d0b9957d1be687ea95318f&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dv2rayN-windows-64-SelfContained.zip&response-content-type=application%2Foctet-stream
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
