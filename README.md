@@ -1,6 +1,12 @@
 ```
 订阅地址: https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64
 
+Windows: https://objects.githubusercontent.com/github-production-release-asset-2e65be/199570071/b09765de-dae4-4bac-a7a5-cfc72b60bd0c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250704%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250704T095928Z&X-Amz-Expires=1800&X-Amz-Signature=0006b59125051bc4f40ada4661d78c192c40502c74d0b9957d1be687ea95318f&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dv2rayN-windows-64-SelfContained.zip&response-content-type=application%2Foctet-stream
+
+Linux: https://objects.githubusercontent.com/github-production-release-asset-2e65be/199570071/1c2501db-a2af-4d8e-b3ee-e43ed318f7a8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250704%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250704T095923Z&X-Amz-Expires=1800&X-Amz-Signature=eb17d264c2625b6ed202b4bef3d9d6421e0bb2dabf1dc047c5511a809bf0c1d4&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dv2rayN-linux-64.deb&response-content-type=application%2Foctet-stream  
+
+APK: https://objects.githubusercontent.com/github-production-release-asset-2e65be/186733095/ddc031cc-cb6d-4b87-9fbc-82bee3b0f885?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250704%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250704T095950Z&X-Amz-Expires=1800&X-Amz-Signature=4203067be5862332ab138bc9fcfe3eaffb63c84699236f605ffdd2ae19bc0b53&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dv2rayNG_1.10.7_x86.apk&response-content-type=application%2Fvnd.android.package-archive
+
 润发慈善2: vless://06e4425e-a8cb-4b63-929f-2105604ab0a9@www.udemy.com:443?encryption=none&security=tls&sni=xv.ylks0033.dpdns.org&fp=randomized&type=ws&host=xv.ylks0033.dpdns.org&path=%2F%3Fed%3D2560#%E6%B6%A6%E5%8F%91%E6%85%88%E5%96%842 <!-- TLS WebSocket 连接，托管于 udemy.com -->
 
 润发慈善1: vless://06e4425e-a8cb-4b63-929f-2105604ab0a9@210.61.97.241:81?encryption=none&security=tls&sni=xv.ylks0033.dpdns.org&alpn=h3&fp=random&type=ws&host=xv.ylks0033.dpdns.org&path=%2F%3Fed%3D2560#%E6%B6%A6%E5%8F%91%E6%85%88%E5%96%841 <!-- TLS WebSocket 连接，IP: 210.61.97.241，端口 81 -->
