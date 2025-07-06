@@ -23,7 +23,7 @@ High-quality subscription links for fast, stable, and secure connectivity — id
 
 | Platform         | Download Link |
 |------------------|---------------|
-| 🪟 **Windows**      | [Download v2rayN (Windows)](https://github.com/2dust/v2rayN/releases) |
+| 💻 **Windows**      | [Download v2rayN (Windows)](https://github.com/2dust/v2rayN/releases) |
 | 🐧 **Linux (.deb)** | [Download v2rayN (Linux)](https://github.com/2dust/v2rayN/releases) |
 | 🤖 **Android APK**  | [Download v2rayNG (Android)](https://github.com/2dust/v2rayNG/releases) |
 
