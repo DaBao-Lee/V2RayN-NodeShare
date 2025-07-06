@@ -6,8 +6,7 @@ High-quality subscription links for fast and stable connectivity—optimized for
 
 ## 🔗 Subscription Links
 
-- **Standard Nodes (4K+)**  
-  👉 [Click to Subscribe](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64)  
+- **Standard Nodes (4K+)**  👉 [Click to Subscribe](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64)  
   Servers located in **Singapore** and **Hong Kong**, featuring low latency. Ideal for:
   - YouTube, Disney+, and other streaming platforms  
   - Everyday browsing and work scenarios
