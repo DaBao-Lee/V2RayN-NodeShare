@@ -1,40 +1,46 @@
 # 🌐 V2RayN Node Share
 
-High-quality subscription links for fast and stable connectivity—optimized for streaming and AI applications.
+High-quality subscription links for fast, stable, and secure connectivity — ideal for streaming media and AI-powered applications.
 
 ---
 
-## 🔗 Subscription Links
+## 🔗 Subscription Options
 
-- **Standard Nodes (4K+)**  👉 [Click to Subscribe](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64)  
-  Servers located in **Singapore** and **Hong Kong**, featuring low latency. Ideal for:
-  - YouTube, Disney+, and other streaming platforms  
-  - Everyday browsing and work scenarios
+- 🔹 **Standard Nodes (4K+)**  
+  👉 [Subscribe Now](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64)  
+  Deployed in **Singapore** and **Hong Kong** with low latency — perfect for:
+  - 📺 Streaming platforms like **YouTube**, **Disney+**, and more  
+  - 🌐 Smooth browsing and daily work use
 
-- **AI-Optimized Nodes (AI+)**
-  👉 [Click to Subscribe](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64-AI)  
-  👨‍💻 Designed specifically for AI platforms with moderate latency. Recommended for:
-  - ChatGPT, Copilot, Gemini, Grok, and more
+- 🤖 **AI-Optimized Nodes (AI+)**  
+  👉 [Subscribe for AI](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64-AI)  
+  Tailored for intelligent platforms with moderate latency — recommended for:
+  - 🧠 **ChatGPT**, **Copilot**, **Gemini**, **Grok**, and other AI tools
 
 ---
 
 ## 💻 Client Downloads
 
-| Platform        | Download Link |
-|-----------------|---------------|
-| **Windows**     | [v2rayN-windows-64-SelfContained.zip](https://github.com/2dust/v2rayN/releases) |
-| **Linux (.deb)** | [v2rayN-linux-64.deb](https://github.com/2dust/v2rayN/releases) |
-| **Android (APK)** | [v2rayNG_1.10.7_x86.apk](https://github.com/2dust/v2rayNG/releases) |
+| Platform         | Download Link |
+|------------------|---------------|
+| 🪟 **Windows**      | [Download v2rayN (Windows)](https://github.com/2dust/v2rayN/releases) |
+| 🐧 **Linux (.deb)** | [Download v2rayN (Linux)](https://github.com/2dust/v2rayN/releases) |
+| 🤖 **Android APK**  | [Download v2rayNG (Android)](https://github.com/2dust/v2rayNG/releases) |
 
 ---
 
-## 🚀 Highlights
+## ✨ Features at a Glance
 
-- Free and ad-free
-- Cross-platform support
-- Optimized for media and AI performance
-- Continuously updated and maintained
+- ✅ Free to use, no ads
+- 💡 Cross-platform compatibility
+- 🚀 Optimized for both media and AI scenarios
+- 🔄 Actively maintained and regularly updated
 
 ---
 
-✨ Feel free to 🌟Star & Fork🌟 this project to show your support!
+## 🙌 Support This Project
+
+If you find this project useful, show your love by giving it a  
+🌟 **Star** and a 🍴 **Fork** to help it grow!
+
+---
