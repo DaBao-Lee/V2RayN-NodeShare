@@ -12,7 +12,8 @@ High-quality subscription links for fast and stable connectivity—optimized for
   - YouTube, Disney+, and other streaming platforms  
   - Everyday browsing and work scenarios
 
-- **AI-Optimized Nodes** (base64-AI)  
+- **AI-Optimized Nodes** (base64-AI)
+  👉 [Click to Subscribe](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64-AI)  
   👨‍💻 Designed specifically for AI platforms with moderate latency. Recommended for:
   - ChatGPT, Copilot, Gemini, Grok, and more
 
