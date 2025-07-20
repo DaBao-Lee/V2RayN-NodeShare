@@ -19,6 +19,19 @@ High-quality subscription links for **fast**, **stable**, and **secure** connect
 
 ---
 
+## 🌟 Additional Node Providers
+
+Explore more sources to diversify your connectivity options:
+
+- 🌀 ripaojiedian --> https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub  
+- ⚡ runfacishan --> https://d.zrf.me/vless-base64  
+- 🐙 yudoutu --> https://www.yudou123.top/  
+- 🎯 85la --> https://www.85la.com/  
+- 🧠 kejiwangluo --> https://www.xinye.eu.org/  
+- 🐣 xiaoqie --> https://lovetoshare.top/
+
+---
+
 ## 💻 Client Downloads
 
 | Platform         | Download Link |
@@ -47,19 +60,6 @@ High-quality subscription links for **fast**, **stable**, and **secure** connect
 - 🌐 **geosite.dat**: [Download](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)  
 - 📃 **direct-list.txt**: [Download](https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt)  
 - 🔐 **proxy-list.txt**: [Download](https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt)
-
----
-
-## 🌟 Additional Node Providers
-
-Explore more sources to diversify your connectivity options:
-
-- 🌀 [ripaojiedian](https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub)
-- ⚡ [runfacishan](https://d.zrf.me/vless-base64)
-- 🐙 [yudoutu](https://www.yudou123.top/)
-- 🎯 [85la](https://www.85la.com/)
-- 🧠 [kejiwangluo](https://www.xinye.eu.org/)
-- 🐣 [xiaoqie](https://lovetoshare.top/)
 
 ---
 
