@@ -25,7 +25,10 @@ High-quality subscription links for **fast**, **stable**, and **secure** connect
 |------------------|---------------|
 | 💻 **Windows**      | [Download v2rayN (Windows)](https://github.com/2dust/v2rayN/releases) |
 | 🐧 **Linux (.deb)** | [Download v2rayN (Linux)](https://github.com/2dust/v2rayN/releases) |
-| 📱 **Android APK**  | [Download v2rayNG (Android)](https://github.com/2dust/v2rayNG/releases) |
+| 📱 **Android APK**  | [Download v2rayNG (Android)](https://github.com/2dust/v2rayNG/releases) |  
+> ⚙️ **Recommended: Use App-Based Routing**  
+> Configure proxy rules per app to avoid compatibility issues from global proxy mode.  
+> Enhances stability and efficiency, especially useful for messaging apps, AI tools, and streaming platforms.
 
 ---
 
