@@ -1,6 +1,6 @@
-# 🌐 V2RayN Node Share
+# 🌐✨ V2RayN Node Share
 
-Premium subscription links offering **fast**, **stable**, and **secure** network connectivity — perfect for streaming, AI applications, and everyday use.
+Get instant access to high-quality V2RayN subscription links for **lightning-fast ⚡**, **stable 🛡️**, and **secure 🔒** internet connectivity. Whether you're streaming 🎬, exploring AI platforms 🤖, or just browsing 🌍, these nodes deliver powerful performance to supercharge your online experience 🚀!
 
 ---
 
@@ -27,6 +27,11 @@ Get started instantly with these high-speed links, optimized for different use c
 **Recommended for:**
 - 💬 Chatbots & AI tools: **ChatGPT**, **Copilot**, **Gemini**, **Grok**, and more  
 - ⚙️ Enhancing AI workflows and development environments
+
+---
+
+> ⚠️ **Note:** Some content may overlap between the Standard and AI-Optimized node lists.  
+> 🧠 For the best experience across both media and AI platforms, we recommend starting with the **AI+ subscription**.
 
 ---
 
