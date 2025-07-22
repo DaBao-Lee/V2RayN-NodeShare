@@ -36,12 +36,39 @@ Diversify your connectivity by exploring other active sources:
 
 | Provider Name | Subscription Link |
 |---------------|-------------------|
-| 🌀 ripaojiedian | https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub |
-| ⚡ runfacishan | https://d.zrf.me/vless-base64 |
-| 🐙 yudoutu      | https://www.yudou123.top/ |
 | 🎯 85la         | https://www.85la.com/ |
-| 🧠 kejiwangluo | https://www.xinye.eu.org/ |
 | 🐣 xiaoqie     | https://lovetoshare.top/ |
+| 🧠 kejiwangluo | https://www.xinye.eu.org/ |
+| 🐙 yudoutu      | https://www.yudou123.top/ |
+| ⚡ runfacishan | https://d.zrf.me/vless-base64 |
+| 🌀 ripaojiedian | https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub |
+
+---
+
+## 🎥 YouTube-Based Node Providers
+
+Explore free V2RayN nodes shared by active YouTube creators. These channels frequently publish updated subscription links, tutorials, and configuration tips — perfect for users seeking long-term, high-performance connectivity.
+
+| 🎬 Channel Name             | 🔗 YouTube Link                              |
+|----------------------------|----------------------------------------------|
+| 🌊 Yudou                    | [@yudou](https://www.youtube.com/@yudou) |
+| 🚀 ZYFXS                    | [@ZYFXS](https://www.youtube.com/@ZYFXS) |
+| ⚡ Kuaizui                  | [@kuaizui](https://www.youtube.com/@kuaizui) |
+| 🔐 SFZY666                 | [@SFZY666](https://www.youtube.com/@SFZY666) |
+| 🧠 Andy_Web3               | [@Andy_Web3](https://www.youtube.com/@Andy_Web3) |
+| 🧭 Independent Thinking     | [@独立思维-online](https://www.youtube.com/@独立思维-online) |
+| 📦 Resource Sharing Hub     | [@ziyuanfenxiangba](https://www.youtube.com/@ziyuanfenxiangba) |
+
+> 💡 These creators often include direct subscription links in their video descriptions and offer walkthroughs for importing nodes into v2rayN.
+
+### 📺 Featured Tutorials
+
+- [Use Cloudflare Worker To Generate V2ray Vless Nodes for ...](https://www.youtube.com/watch?v=OOwRoP_SWzk) — Shows how to create your own VLESS nodes using Cloudflare Workers and import them into v2rayN
+- [v2rayN电脑和手机使用教程，手把手演示一看就会，附送长期节点](https://www.youtube.com/watch?v=F02YldyO6sk) — Demonstrates setup on both desktop and mobile, with access to long-term free nodes
+- [最新版V2rayN使用教程：导入节点的4个方法，节点分组功能的讲解](https://www.youtube.com/watch?v=Axtc-pfua5w&pp=0gcJCfcAhR29_xXO) — Covers multiple import methods and node grouping features
+- [2025新版v2rayN使用教程，功能优化，现已非常好用](https://www.youtube.com/watch?v=M0xbnQTPCCc) — Explains the latest version with improved functionality
+
+Stay connected with these creators to keep your node list fresh and your internet blazing fast 🔥
 
 ---
 
