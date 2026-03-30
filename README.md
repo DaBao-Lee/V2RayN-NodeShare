@@ -19,17 +19,6 @@ Get started instantly with these high-speed links, optimized for different use c
 
 ---
 
-### 🤖 AI-Optimized Nodes (AI+)
-
-👉 [Subscribe for AI](https://raw.githubusercontent.com/DaBao-Lee/V2RayN-NodeShare/main/base64-AI)  
-🧠 Specially tuned for intelligent platforms and applications, with balanced speed and latency.
-
-**Recommended for:**
-- 💬 Chatbots & AI tools: **ChatGPT**, **Copilot**, **Gemini**, **Grok**, and more  
-- ⚙️ Enhancing AI workflows and development environments
-
----
-
 > ⚠️ **Note:** Some content may overlap between the Standard and AI-Optimized node lists.  
 > 🧠 For the best experience across both media and AI platforms, we recommend starting with the **AI+ subscription**.
 
