@@ -6,6 +6,7 @@ from specific web sources (yudou789 and mibei77) and downloading them.
 import requests
 import re
 import os
+import base64
 from typing import List, Tuple, Optional
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
@@ -18,6 +19,8 @@ DEFAULT_HEADERS = {
 YUDOU_BASE_URL = "https://www.yudou789.top/"
 MIBEI_BASE_URL = "https://www.mibei77.com/category/jiedian"
 TIMEOUT_SECONDS = 10
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE64_OUTPUT_FILE = os.path.join(SCRIPT_DIR, "base64")
 
 # --- Type Definitions ---
 # Define a clear type alias for the result structure
@@ -59,6 +62,85 @@ def clean_existing_nodes(output_directory: str) -> List[str]:
 
     print("--- Cleanup complete ---")
     return deleted_files
+
+
+NODE_LINK_RE = re.compile(r'^[a-zA-Z][a-zA-Z0-9+.\-]*://')
+
+def extract_node_lines(content: str) -> List[str]:
+    """
+    Returns the plain node links (one per line) carried by a subscription body.
+
+    Downloaded `.txt` subscriptions are usually a single base64 blob, but some
+    sources serve the links already in plain text, so both shapes are accepted.
+    """
+    lines = [line.strip() for line in content.splitlines() if line.strip()]
+    if lines and all(NODE_LINK_RE.match(line) for line in lines):
+        return lines
+
+    try:
+        decoded = base64.b64decode(''.join(lines), validate=True).decode('utf-8')
+    except (ValueError, UnicodeDecodeError):
+        return lines
+
+    return [line.strip() for line in decoded.splitlines() if line.strip()]
+
+def write_base64_subscription(output_directory: str = 'nodes_output',
+                              target_path: str = BASE64_OUTPUT_FILE) -> Optional[str]:
+    """
+    Merges every `.txt` subscription in the output directory into one
+    base64-encoded blob and writes it to the repository root ``base64`` file.
+
+    Args:
+        output_directory: Directory holding the downloaded ``.txt`` subscriptions.
+        target_path: Destination file for the merged base64 subscription.
+
+    Returns:
+        The ``target_path`` on success, or ``None`` when there were no nodes.
+    """
+    if not os.path.isdir(output_directory):
+        print(f"Directory does not exist: {output_directory}")
+        return None
+
+    txt_files = sorted(
+        os.path.join(output_directory, name)
+        for name in os.listdir(output_directory)
+        if name.endswith('.txt')
+    )
+
+    node_lines: List[str] = []
+    seen = set()
+
+    for filepath in txt_files:
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except IOError as e:
+            print(f"✗ Failed to read {filepath}: {e}")
+            continue
+
+        before = len(node_lines)
+        for line in extract_node_lines(content):
+            if line not in seen:
+                seen.add(line)
+                node_lines.append(line)
+        print(f"✓ {os.path.basename(filepath)}: {len(node_lines) - before} new nodes")
+
+    if not node_lines:
+        print("✗ No nodes found, base64 subscription was not updated.")
+        return None
+
+    encoded = base64.b64encode('\n'.join(node_lines).encode('utf-8')).decode('ascii')
+    try:
+        with open(target_path, 'w', encoding='utf-8') as f:
+            f.write(encoded)
+    except IOError as e:
+        print(f"✗ Failed to write {target_path}: {e}")
+        return None
+
+    print(f"\n✅ Base64 subscription saved: {target_path} "
+          f"({len(node_lines)} nodes from {len(txt_files)} files)")
+    return target_path
+
 
 class NodeCrawler:
     """
@@ -407,6 +489,9 @@ class NodeCrawler:
         # 2. Crawl and Process Mibei77
         mibei_results = self.crawl_mibei77(limit=limit)
         self.process_results(mibei_results, 'mibei77')
+
+        # 3. Merge the downloaded .txt subscriptions into the root base64 file.
+        write_base64_subscription(self.output_directory)
 
         print("\n" + "="*50)
         print("✅ Crawler Execution Complete")
