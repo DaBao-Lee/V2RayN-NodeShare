@@ -117,7 +117,7 @@ V2RayN-NodeShare/
 `node_get.py` runs this pipeline:
 
 1. **Clean** `nodes_output/` (all `.txt` / `.yaml` / `.yml`) so a run never mixes stale days together.
-2. **Crawl** the listing pages of [`yudou789.top`](https://www.yudou789.top/) and [`mibei77.com`](https://www.mibei77.com/category/jiedian), taking the two newest posts from each.
+2. **Crawl** the listing pages of [`yudou789.top`](https://www.yudou789.top/) and [`mibei77.com`](https://www.mibei77.com/), taking the two newest posts from each. mibei77 is a Blogger site, so its entry links are the post titles marked `<a rel="bookmark">`; only titles containing “节点” are followed (VPN/client guide posts are skipped), and the links are read from the detail page's `#ydUnlockedContent` box.
 3. **Extract** both subscription links from each post body. Upstream pages often glue the `.txt` and `.yaml` URLs together with no whitespace, so the parser splits on every `http` occurrence before matching — otherwise one regex swallows both links into garbage.
 4. **Download** each `.txt` (V2Ray / Shadowrocket / NekoBox style) and each `.yaml` (Clash Meta) into `nodes_output/`.
 5. **Merge and publish**: decode every `.txt` (some sources already serve plaintext), de-duplicate share links while preserving first-seen order, base64-encode the whole set, and write it to `base64` in the repo root. If a run yields nothing, the previous `base64` is left untouched rather than blanked.

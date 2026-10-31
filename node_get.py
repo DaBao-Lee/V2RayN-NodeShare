@@ -17,7 +17,7 @@ DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }
 YUDOU_BASE_URL = "https://www.yudou789.top/"
-MIBEI_BASE_URL = "https://www.mibei77.com/category/jiedian"
+MIBEI_BASE_URL = "https://www.mibei77.com/"
 TIMEOUT_SECONDS = 10
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE64_OUTPUT_FILE = os.path.join(SCRIPT_DIR, "base64")
@@ -355,7 +355,19 @@ class NodeCrawler:
         return results
 
     def crawl_mibei77(self, limit: int = 2) -> List[SubscriptionResult]:
-        """Crawls mibei77.com, extracts links, and processes results."""
+        """
+        Crawls mibei77.com, extracts links, and processes results.
+
+        The site now renders its post list as Blogger entries: every node post
+        is an ``<a rel="bookmark">`` whose title contains "节点". The old
+        ``/category/jiedian`` listing is gone (404), so the home page is used as
+        the entry point and the bookmark links are filtered by title to skip
+        unrelated articles (VPN recommendations, client downloads, ...).
+
+        The subscription links live in the detail page's
+        ``#ydUnlockedContent`` box and are already in plain text, so no
+        unlocking/decryption step is needed.
+        """
         print("\n" + "="*50)
         print("Starting crawl for mibei77.com")
         print("="*50)
@@ -365,19 +377,20 @@ class NodeCrawler:
             return []
 
         soup = BeautifulSoup(html, 'html.parser')
-        items = soup.find_all(class_='item-heading')
         results: List[SubscriptionResult] = []
 
-        print(f"Found {len(items)} node listings.")
-
-        for idx, item in enumerate(items[:limit], 1):
-            a_tag = item.find('a')
-            if not a_tag or not a_tag.get('href'):
+        node_posts: List[Tuple[str, str]] = []
+        for a_tag in soup.find_all('a', rel='bookmark', href=True):
+            title = (a_tag.get('title') or a_tag.get_text(strip=True)).strip()
+            if '节点' not in title:
                 continue
-
-            title = a_tag.get_text(strip=True)
             share_url = urljoin(MIBEI_BASE_URL, a_tag['href'])
+            if share_url not in (url for _, url in node_posts):
+                node_posts.append((title, share_url))
 
+        print(f"Found {len(node_posts)} node listings.")
+
+        for idx, (title, share_url) in enumerate(node_posts[:limit], 1):
             print(f"\n[{idx}] Title: {title}")
             print(f"    Visit: {share_url}")
 
@@ -386,10 +399,14 @@ class NodeCrawler:
                 continue
 
             soup_share = BeautifulSoup(share_html, 'html.parser')
-            content_box = soup_share.find(class_='theme-box wp-posts-content')
+            content_box = (
+                soup_share.select_one('#ydUnlockedContent')
+                or soup_share.select_one('.yd-unlocked-content')
+                or soup_share.find(class_='theme-box wp-posts-content')
+            )
 
             if content_box:
-                content_text = content_box.get_text(strip=True)
+                content_text = content_box.get_text(' ', strip=True)
 
                 # Extract BOTH the plain .txt link and the Clash Meta .yaml link.
                 v2ray_url, yaml_url = self._extract_subscription_links(content_text, 'mibei77')
