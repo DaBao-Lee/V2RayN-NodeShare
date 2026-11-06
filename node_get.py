@@ -17,7 +17,7 @@ DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }
 YUDOU_BASE_URL = "https://www.yudou789.top/"
-MIBEI_BASE_URL = "https://www.mibei77.com/"
+MIBEI_BASE_URL = "https://www.mibei77.com/category/jiedian"
 TIMEOUT_SECONDS = 10
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE64_OUTPUT_FILE = os.path.join(SCRIPT_DIR, "base64")
@@ -358,15 +358,13 @@ class NodeCrawler:
         """
         Crawls mibei77.com, extracts links, and processes results.
 
-        The site now renders its post list as Blogger entries: every node post
-        is an ``<a rel="bookmark">`` whose title contains "节点". The old
-        ``/category/jiedian`` listing is gone (404), so the home page is used as
-        the entry point and the bookmark links are filtered by title to skip
-        unrelated articles (VPN recommendations, client downloads, ...).
+        The listing renders each post as ``<h2 class="item-heading"><a href>``
+        (same shape as yudou789), so the entry point is the ``/category/jiedian``
+        page and no title filtering is needed: everything there is a node post.
 
-        The subscription links live in the detail page's
-        ``#ydUnlockedContent`` box and are already in plain text, so no
-        unlocking/decryption step is needed.
+        The subscription links live in the detail page's ``.wp-posts-content``
+        box and are already in plain text, so no unlocking/decryption step is
+        needed.
         """
         print("\n" + "="*50)
         print("Starting crawl for mibei77.com")
@@ -380,10 +378,11 @@ class NodeCrawler:
         results: List[SubscriptionResult] = []
 
         node_posts: List[Tuple[str, str]] = []
-        for a_tag in soup.find_all('a', rel='bookmark', href=True):
-            title = (a_tag.get('title') or a_tag.get_text(strip=True)).strip()
-            if '节点' not in title:
+        for heading in soup.find_all(class_='item-heading'):
+            a_tag = heading.find('a', href=True)
+            if not a_tag:
                 continue
+            title = a_tag.get_text(strip=True)
             share_url = urljoin(MIBEI_BASE_URL, a_tag['href'])
             if share_url not in (url for _, url in node_posts):
                 node_posts.append((title, share_url))
