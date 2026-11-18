@@ -1,0 +1,1359 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - localhost
+    - +.localhost
+    - +.lan
+    - +.local
+    - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+      - https://223.5.5.5/dns-query#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+proxies:
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享)
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+      short-id: 15aa0ad4
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (2)
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+      short-id: 15aa0ad4
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (3)
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+      short-id: 15aa0ad4
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (4)
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+      short-id: 15aa0ad4
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (5)
+    server: zfapi.zalolink.com
+    port: 30322
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+      short-id: 6a60e7e382d6
+  - type: vless
+    name: 新加坡(yudou99.com 玉豆分享)
+    server: 43.170.8.95
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    sni: jp3.yohototo.top
+    skip-cert-verify: false
+    client-fingerprint: unsafe
+    network: ws
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - type: vless
+    name: 瑞典(yudou99.com 玉豆分享)
+    server: 88.216.214.159
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: api-svc-mgr.galioncc.com
+    sni: api-svc-mgr.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 瑞典(yudou99.com 玉豆分享) (2)
+    server: 88.216.214.159
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: api-svc-mgr.galioncc.com
+    sni: api-svc-mgr.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (6)
+    server: zfapi.zalolink.com
+    port: 30322
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+      short-id: 6a60e7e382d6
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (7)
+    server: zfapi.zalolink.com
+    port: 30322
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+      short-id: 6a60e7e382d6
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (8)
+    server: zfapi.zalolink.com
+    port: 30322
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+      short-id: 6a60e7e382d6
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (9)
+    server: zfapi.zalolink.com
+    port: 54528
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    sni: www.apple.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+      short-id: 54cca3c1c1c7
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (2)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (10)
+    server: zfapi.zalolink.com
+    port: 54528
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    sni: www.apple.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+      short-id: 54cca3c1c1c7
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享)
+    server: 88.216.60.73
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: ns-api-gw.galioncc.com
+    sni: ns-api-gw.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 德国(yudou99.com 玉豆分享)
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 荷兰(yudou99.com 玉豆分享)
+    server: 80.47.10.106
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: pl8.galioncc.com
+    sni: pl8.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 英国(yudou99.com 玉豆分享)
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (2)
+    server: zfapi.zalolink.com
+    port: 47691
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: m.media-amazon.com
+    sni: m.media-amazon.com
+    skip-cert-verify: false
+    client-fingerprint: safari
+    reality-opts:
+      public-key: 6PbC7GxOg_YdXya-53llPReUzoU_yknQbkDvI4uorBg
+      short-id: 2905326a
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (3)
+    server: 196.199.122.2
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 7aa271t.es1.h1clayd.click
+    sni: 7aa271t.es1.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+      short-id: 42426c882c5fcd41
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (4)
+    server: 196.199.122.2
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 7aa271t.es1.h1clayd.click
+    sni: 7aa271t.es1.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+      short-id: 42426c882c5fcd41
+  - type: vless
+    name: 西班牙(yudou99.com 玉豆分享)
+    server: 196.196.149.80
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 7aa271t.es1.h1clayd.click
+    sni: 7aa271t.es1.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+      short-id: 42426c882c5fcd41
+  - type: vless
+    name: 法国(yudou99.com 玉豆分享)
+    server: fr.abbaas.net
+    port: 443
+    uuid: 6962c372-27da-56d6-9d1f-8041abb7538e
+    udp: true
+    tls: true
+    servername: w-x.co
+    sni: w-x.co
+    skip-cert-verify: false
+    reality-opts:
+      public-key: wBh3jtk45kBonp2-uVqsx71F4ziNH7vZcU6DAC6t2xs
+      short-id: 1296174a86a6ac8c
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (5)
+    server: 84.32.54.237
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: rly-gw-cfg.galioncc.com
+    sni: rly-gw-cfg.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: 868419504747f6de
+  - type: vless
+    name: 法国(yudou99.com 玉豆分享) (2)
+    server: fr.abbaas.net
+    port: 443
+    uuid: 6962c372-27da-56d6-9d1f-8041abb7538e
+    udp: true
+    tls: true
+    servername: wxug.com
+    sni: wxug.com
+    skip-cert-verify: false
+    reality-opts:
+      public-key: wBh3jtk45kBonp2-uVqsx71F4ziNH7vZcU6DAC6t2xs
+      short-id: 0ccc9342fa5e7f
+  - type: ss
+    name: 美国(yudou99.com 玉豆分享) (6)
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 德国(yudou99.com 玉豆分享) (2)
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (7)
+    server: c353abt.es5.h1clayd.click
+    port: 443
+    uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: c353abt.es5.h1clayd.click
+    sni: c353abt.es5.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: eYKLFr3Jz14re6BUiCNDujKxmUP4-SzCnSQvxVGfaCY
+      short-id: 3dcd74a8248d6bff
+  - type: vless
+    name: 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+    server: 201.34.137.8
+    port: 443
+    uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: node-pl-2.nztpro.com
+    sni: node-pl-2.nztpro.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HyPCaHlGMjE2h7D4F6dtyFHeXDEAHIUg9fXJgADc5H0
+      short-id: 134a7678ec2a3285
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (3)
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (4)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (8)
+    server: 199.232.78.120
+    port: 443
+    uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+    udp: true
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    sni: cdn.akamai.steamstatic.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ushetzijji.global.ssl.fastly.net.
+  - type: trojan
+    name: 美国(yudou99.com 玉豆分享) (9)
+    server: sclass-00.catcat321.com
+    port: 20123
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 美国(yudou99.com 玉豆分享) (10)
+    server: sclass-c1.catcat321.com
+    port: 20086
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - type: vless
+    name: 加拿大(yudou99.com 玉豆分享)
+    server: 172.64.152.19
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    sni: jp3.yohototo.top
+    skip-cert-verify: false
+    client-fingerprint: unsafe
+    network: ws
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (11)
+    server: 194.55.167.133
+    port: 443
+    uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cy1.gofizz.in
+    sni: cy1.gofizz.in
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: XSh3jB8zXtqpI38glgwN2Bn5imxN8Rkyc39LeBSD8BQ
+      short-id: 24f1fa53275b
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (5)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 德国(yudou99.com 玉豆分享) (3)
+    server: 104.18.42.98
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    sni: jp3.yohototo.top
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - type: ss
+    name: 美国(yudou99.com 玉豆分享) (12)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 美国(yudou99.com 玉豆分享) (13)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (6)
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利(yudou99.com 玉豆分享) (7)
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 日本(yudou99.com 玉豆分享) (11)
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: psstatic.cdn.bcebos.com
+    sni: psstatic.cdn.bcebos.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+      short-id: 15aa0ad4
+  - type: vless
+    name: 荷兰(yudou99.com 玉豆分享) (2)
+    server: 104.171.135.229
+    port: 443
+    uuid: Fluffy_VPN-Oth8rOq3
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: absolute-disaster.org
+    sni: absolute-disaster.org
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0
+  - type: vless
+    name: 俄罗斯(yudou99.com 玉豆分享)
+    server: 37.18.14.177
+    port: 443
+    uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
+    udp: true
+    tls: true
+    servername: owj5svd907.deshevayashaurma.icu
+    sni: owj5svd907.deshevayashaurma.icu
+    skip-cert-verify: false
+    alpn:
+      - http/1.1
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /static/collect/037b5c44e12a/
+      headers:
+        Host: owj5svd907.deshevayashaurma.icu
+  - type: trojan
+    name: 美国(yudou99.com 玉豆分享) (14)
+    server: sclass-00.catcat321.com
+    port: 20103
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 美国(yudou99.com 玉豆分享) (15)
+    server: sclass-b1.catcat321.com
+    port: 20051
+    password: d7563108-615c-4338-a7bd-77f359869a4a
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 新加坡(yudou99.com 玉豆分享) (2)
+    server: sclass-01.catcat321.com
+    port: 20103
+    password: d7563108-615c-4338-a7bd-77f359869a4a
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (16)
+    server: 196.196.148.76
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 8a2e72t.nl20.h1clayd.shop
+    sni: 8a2e72t.nl20.h1clayd.shop
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+      short-id: 8d0d0679f42ffd98
+  - type: vless
+    name: 俄罗斯(yudou99.com 玉豆分享) (2)
+    server: 92.255.58.59
+    port: 443
+    uuid: a30903dc-1bf0-0001-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: api-gw-cfg.galioncc.com
+    sni: api-gw-cfg.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: 344f83372596eea2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (17)
+    server: 196.196.149.81
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 7aa271t.es1.h1clayd.click
+    sni: 7aa271t.es1.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+      short-id: 42426c882c5fcd41
+  - type: trojan
+    name: 美国(yudou99.com 玉豆分享) (18)
+    server: sclass-c2.catcat321.com
+    port: 20051
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (19)
+    server: 162.35.101.177
+    port: 443
+    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+    udp: true
+    tls: true
+    servername: 0592efg.us8.h1clayd.click
+    sni: 0592efg.us8.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: edge
+    reality-opts:
+      public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+      short-id: bd8f712209a9c283
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 99f2107b03f8
+  - type: vless
+    name: 瑞典(yudou99.com 玉豆分享) (3)
+    server: 88.216.60.73
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: ns-api-gw.galioncc.com
+    sni: ns-api-gw.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 瑞典(yudou99.com 玉豆分享) (4)
+    server: 88.216.60.73
+    port: 443
+    uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+    udp: true
+    tls: true
+    servername: ns-api-gw.galioncc.com
+    sni: ns-api-gw.galioncc.com
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+      short-id: a7c92e4b10d6f835
+  - type: vless
+    name: 美国(yudou99.com 玉豆分享) (20)
+    server: a357e2g.es5.h1clayd.click
+    port: 443
+    uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
+    udp: true
+    tls: true
+    servername: a357e2g.es5.h1clayd.click
+    sni: a357e2g.es5.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: edge
+    reality-opts:
+      public-key: RBmtyb7WJzYMTHpRrlLwVk_dbSStfGds8dZtpTf6gAE
+      short-id: 23dda49556665b0d
+    network: grpc
+    grpc-opts: {}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 日本(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (3)
+      - 日本(yudou99.com 玉豆分享) (4)
+      - 日本(yudou99.com 玉豆分享) (5)
+      - 新加坡(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享)
+      - 瑞典(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (6)
+      - 日本(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (8)
+      - 意大利(yudou99.com 玉豆分享)
+      - 日本(yudou99.com 玉豆分享) (9)
+      - 意大利(yudou99.com 玉豆分享) (2)
+      - 日本(yudou99.com 玉豆分享) (10)
+      - 美国(yudou99.com 玉豆分享)
+      - 德国(yudou99.com 玉豆分享)
+      - 荷兰(yudou99.com 玉豆分享)
+      - 英国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (4)
+      - 西班牙(yudou99.com 玉豆分享)
+      - 法国(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (5)
+      - 法国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (6)
+      - 德国(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (7)
+      - 俄罗斯(yudou99.com 玉豆分享)🇷🇺_俄罗斯_youtube@资源分享师_62
+      - 意大利(yudou99.com 玉豆分享) (3)
+      - 意大利(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (8)
+      - 美国(yudou99.com 玉豆分享) (9)
+      - 美国(yudou99.com 玉豆分享) (10)
+      - 加拿大(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (11)
+      - 意大利(yudou99.com 玉豆分享) (5)
+      - 德国(yudou99.com 玉豆分享) (3)
+      - 美国(yudou99.com 玉豆分享) (12)
+      - 美国(yudou99.com 玉豆分享) (13)
+      - 意大利(yudou99.com 玉豆分享) (6)
+      - 意大利(yudou99.com 玉豆分享) (7)
+      - 日本(yudou99.com 玉豆分享) (11)
+      - 荷兰(yudou99.com 玉豆分享) (2)
+      - 俄罗斯(yudou99.com 玉豆分享)
+      - 美国(yudou99.com 玉豆分享) (14)
+      - 美国(yudou99.com 玉豆分享) (15)
+      - 新加坡(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (16)
+      - 俄罗斯(yudou99.com 玉豆分享) (2)
+      - 美国(yudou99.com 玉豆分享) (17)
+      - 美国(yudou99.com 玉豆分享) (18)
+      - 美国(yudou99.com 玉豆分享) (19)
+      - 瑞典(yudou99.com 玉豆分享) (3)
+      - 瑞典(yudou99.com 玉豆分享) (4)
+      - 美国(yudou99.com 玉豆分享) (20)
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
